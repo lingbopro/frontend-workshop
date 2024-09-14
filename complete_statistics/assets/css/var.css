@@ -1,0 +1,35 @@
+:root {
+    --panel-radius: 5px;
+    --panel-margin: 5px;
+    --panel-padding: 15px;
+    --component-radius: 5px;
+    --font-color: #ffffff;
+    --panel-background-color: #d8d8d8a0;
+    --btn-background-color: #65b5ff;
+    --btn-active-background-color: #96ccff;
+    --btn-red-background-color: #ff6f65;
+    --btn-red-active-background-color: #ff9d96;
+    --flatbtn-background-color: #00000000;
+    --flatbtn-active-background-color: #ffffff6e;
+    --input-background-color: #e2f1ff4b;
+    --input-active-background-color: #f5faff66;
+    --sub-bg-color-0: #c48f86;
+    --sub-bg-color-1: #98daa9;
+    --transition-duration: 0.2s;
+    --panel-filter: blur(5px);
+    --background-image: linear-gradient(to right, #167fe0, #6adfae);
+}
+.no-radius {
+    --component-radius: 0;
+    --panel-radius: 0;
+}
+.no-blur {
+    --panel-filter: none;
+}
+
+.status-0 {
+    --sub-background-color: var(--sub-bg-color-0)
+}
+.status-1 {
+    --sub-background-color: var(--sub-bg-color-1)
+}

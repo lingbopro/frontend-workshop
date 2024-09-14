@@ -1,0 +1,65 @@
+:root {
+    background-image: var(--background-image);
+}
+
+.panel {
+    display: block;
+    padding: var(--panel-padding);
+    margin: var(--panel-margin);
+    border: none;
+    border-radius: var(--panel-radius);
+    background-color: var(--panel-background-color);
+    -webkit-backdrop-filter: var(--panel-filter);
+    backdrop-filter: var(--panel-filter);
+    transition-duration: var(--transition-duration);
+}
+
+button, .btn, .flat-btn {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--font-color);
+    cursor: pointer;
+    border: none;
+    border-radius: var(--component-radius);
+    transition-duration: var(--transition-duration);
+    -webkit-user-select: none;
+    user-select: none;
+}
+button, .btn {
+    background-color: var(--btn-background-color);
+}
+button:hover, .btn:hover {
+    background-color: var(--btn-active-background-color);
+}
+.btn-red {
+    background-color: var(--btn-red-background-color);
+}
+.btn-red:hover {
+    background-color: var(--btn-red-active-background-color);
+}
+.flat-btn {
+    background-color: var(--flatbtn-background-color);
+}
+.flat-btn:hover {
+    background-color: var(--flatbtn-active-background-color);
+}
+
+input, textarea {
+    padding: 8px;
+    text-decoration: none;
+    color: var(--font-color);
+    border: none;
+    outline: 0;
+    border-radius: var(--component-radius);
+    transition-duration: var(--transition-duration);
+}
+input, textarea {
+    background-color: var(--input-background-color);
+}
+input:hover, textarea:hover {
+    background-color: var(--input-active-background-color);
+}
+
+.bi {
+    margin-right: 10px;
+}

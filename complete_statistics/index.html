@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title>完成情况统计</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="description" content="简单快速地统计完成情况" />
+        <link rel="stylesheet" href="./assets/css/var.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/index.css" />
+        <link rel="stylesheet" href="./assets/lib/bootstrap-icons/bootstrap-icons.min.css" />
+        <script src="./assets/js/main.js"></script>
+        <script src="./assets/js/ui.js"></script>
+    </head>
+    <body onload="e_load()">
+        <div class="wrapper" id="page">
+            <header class="panel">
+                <div class="title">完成情况统计</div>
+            </header>
+            <div id="main">
+                <aside class="sidebar panel" id="sidebar">
+                    <ul id="tasks"></ul>
+                    <div id="optionsBar">
+                        <button class="flat-btn" type="button" onclick="e_addButton()">
+                            <i class="bi bi-plus-lg"></i>添加项目
+                        </button>
+                        <button class="flat-btn" type="button" onclick="e_editButton()">
+                            <i class="bi bi-pencil-square"></i>修改
+                        </button>
+                        <button class="flat-btn" type="button" onclick="e_settingsButton()">
+                            <i class="bi bi-gear-fill"></i>设置
+                        </button>
+                    </div>
+                </aside>
+                <div class="panel" id="mainPanel">
+                    <div class="panel-child" id="panel-hint">
+                        <p align="center">选择一个视图来显示。</p>
+                    </div>
+                    <div class="panel-child" id="panel-add">
+                        <h1>添加项目</h1>
+                        <label for="taskName">项目名称</label>
+                        <input type="text" id="taskName" />
+                        <br /><br />
+                        <label for="subTaskAmount">子项目数</label>
+                        <input type="number" id="subTaskAmount" />
+                        <br /><br />
+                        <button class="btn" type="submit" onclick="e_addSubmitButton()">
+                            <i class="bi bi-check2"></i>添加
+                        </button>
+                    </div>
+                    <div class="panel-child" id="panel-details">
+                        <h1 id="details-task-id"></h1>
+                        <p id="details-task-name"></p>
+                        <div id="details-sub"></div>
+                    </div>
+                    <div class="panel-child" id="panel-edit">
+                        <h1>修改</h1>
+                        <p id="edit-task-id"></p>
+                        <p id="edit-task-name"></p>
+                        <label for="editTaskName">项目名称</label>
+                        <input type="text" id="editTaskName" />
+                        <br /><br />
+                        <button class="btn" type="submit" onclick="e_editSubmitButton()">
+                            <i class="bi bi-check2"></i>修改
+                        </button>
+                        <button class="btn btn-red" type="button" onclick="e_deleteSubmitButton()">
+                            <i class="bi bi-trash3"></i>删除
+                        </button>
+                    </div>
+                    <div class="panel-child" id="panel-settings">
+                        <h1>设置</h1>
+                        <h2>通用</h2>
+                        <label for="autoSave">
+                            <i class="bi bi-save"></i>自动保存
+                        </label>
+                        <input type="checkbox" name="autoSave" id="autoSave" title="自动保存" />
+                        <br />
+                        <h2>外观</h2>
+                        <label for="radius">
+                            <i class="bi bi-app"></i>圆角
+                        </label>
+                        <input type="checkbox" name="radius" id="radius" title="圆角" />
+                        <br />
+                        <label for="blur">
+                            <i class="bi bi-layers-half"></i>背景模糊
+                        </label>
+                        <input type="checkbox" name="blur" id="blur" title="背景模糊" />
+                        <br />
+                        <h2>数据</h2>
+                        <textarea id="import" cols="40" rows="10"></textarea>
+                        <br />
+                        <button class="btn" type="button" onclick="e_importButton()">
+                            <i class="bi bi-box-arrow-in-down"></i>导入
+                        </button>
+                        <button class="btn" type="button" onclick="e_exportButton()">
+                            <i class="bi bi-box-arrow-down"></i>导出
+                        </button>
+                        <button class="btn btn-red" type="button" onclick="e_deleteAllButton()">
+                            <i class="bi bi-trash3"></i>全部删除
+                        </button>
+                        <br /><br />
+                        <button class="btn" type="submit" onclick="e_settingsSubmitButton()">
+                            <i class="bi bi-check2"></i>确定
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="panel" id="dialog"></div>
+        </div>
+    </body>
+</html>

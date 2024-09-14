@@ -6,7 +6,8 @@
 
 以下是目前的东西：
 
-- 暂无
+- **完成情况统计** `complete-statistics` [[源码目录]](./complete_statistics) [[部署地址]](https://lingbopro.github.io/random-student/complete_statistics/index.html)  
+  名字可能不是很贴切，但是确实能用来直观的显示谁没完成，不是吗（）  
 
 还有其它的一些不在本仓库里的前端小东西：
 
